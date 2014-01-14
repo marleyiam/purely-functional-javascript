@@ -1,0 +1,21 @@
+* Purely Functional JavaScript
+
+An ebook about the purely functional approach to programming in JavaScript.
+
+
+** Outline
+*** TODO Introduction
+**** Why FP?
+**** Why JavaScript?
+**** How to follow the examples in this book
+*** TODO Programming as Mathematical Computations
+**** An introduction to lambda calculus
+**** The substitution model of execution
+**** How equational reasoning can save your bacon
+*** TODO Representing Data With Algebraic Data Types
+*** TODO Abstracting Computations With Higher-Order Functions
+*** TODO Computing Large Data With Recursion
+*** TODO Building Large Data With Co-Recursion
+*** TODO Functors, Applicatives, and Other Algebraic Structures
+*** TODO Purely Functional I/O
+*** TODO ?
