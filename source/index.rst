@@ -1,22 +1,20 @@
-.. Purely Functional JavaScript documentation master file, created by
-   sphinx-quickstart on Tue Jan 14 15:48:24 2014.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Purely Functional JavaScript
+============================
 
-Welcome to Purely Functional JavaScript's documentation!
-========================================================
+This book is a thorough introduction to purely functional programming,
+using the JavaScript programming language. It covers academic theory and
+practical applications for many topics, including recursion,
+co-recursion, algebraic types, and the so feared M-word.
 
-Contents:
+.. warning::
+   This book is a work in progress! Many of the things have not been
+   reviewed yet, so if you see anything wrong, `file a ticket`_ on the
+   GitHub tracker.
+
+.. _file a ticket: https://github.com/robotlolita/purely-functional-javascript/issues
+
+Table of Contents
+'''''''''''''''''
 
 .. toctree::
    :maxdepth: 2
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
