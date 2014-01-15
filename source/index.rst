@@ -21,3 +21,4 @@ Table of Contents
 
    preface
    chapters/introduction
+   chapters/chapter-1
