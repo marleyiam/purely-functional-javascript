@@ -13,7 +13,8 @@ co-recursion, algebraic types, and the so feared M-word.
 
 .. _file a ticket: https://github.com/robotlolita/purely-functional-javascript/issues
 
-**Table of Contents**:
+Table of Contents
+'''''''''''''''''
 
 .. toctree::
    :maxdepth: 2
