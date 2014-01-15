@@ -1,0 +1,202 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Preface &mdash; Purely Functional JavaScript 0.0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'',
+        VERSION:'0.0.1',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+    <script type="text/javascript">
+        jQuery(function () {
+            SphinxRtdTheme.StickyNav.enable();
+        });
+    </script>
+  
+
+  
+    <link rel="top" title="Purely Functional JavaScript 0.0.1 documentation" href="index.html"/>
+        <link rel="next" title="Introduction" href="chapters/introduction.html"/>
+        <link rel="prev" title="Purely Functional JavaScript" href="index.html"/> 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="icon icon-home"> Purely Functional JavaScript</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapters/introduction.html#why-care-about-functional-programming">Why care about Functional Programming?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/introduction.html#why-use-javascript">Why use JavaScript?</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="index.html">Purely Functional JavaScript</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Preface</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/preface.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="preface">
+<h1>Preface<a class="headerlink" href="#preface" title="Permalink to this headline">¶</a></h1>
+<p>Recently the programming community has been increasingly interested in
+subsets of functional programming, such as immutable data structures, in
+light of the challenges faced in developing concurrent systems. These
+subsets are slowly being incorporated into mainstream programming
+languages, such as Java with Project Lambda. Likewise, the number of
+articles and books on the subject of functional programming have been
+increasing steadily.</p>
+<p>None the less, the idea of purely functional programming is not as
+wide-spread, or understood by the programming community at
+large. The idea of thinking about programs that contain no side-effects
+after years of imperative programming is a challenging one. However,
+pure functional programming offers many practical advantages for several
+problems encountered when developing computer systems today, specially
+in terms of maintainability.</p>
+<p>This book introduces the purely functional approach to programming,
+whose mathematical roots provide a straight-forward way of reasoning
+about one&#8217;s programs. Purely functional programs tend to be more
+abstract and general, thus can be widely reused and composed in
+different contexts. The goal of this book is to provide the reader with
+enough understanding of the core foundations of functional programming,
+and to be able to use those for building abstractions and managing
+complexity by building larger programs through the composition of
+smaller ones.</p>
+<p>The material presented in this book is highly theoretical, including
+recursion, co-recursion, persistent data structures, monads, and
+others. The theory is explained through concrete examples, and practical
+use cases. The reader should be able to see what a particular concept is
+useful for in certain situations, and extrapolate from the presented
+examples to other situations and contexts, that might arise in their
+programs.</p>
+<p>While the concepts and theories are general and applicable to most
+programming languages, the code examples are provided using the
+JavaScript language. JavaScript is not the most natural language for
+purely functional programming, but it&#8217;s a simple, and ubiquitous
+language. These properties should allow the reader to quickly experiment
+with the concepts and get feedback on their code. Familiarity with
+JavaScript is not strictly required to read this book, though it never
+teaches the language, the underlying semantics that are used thorough
+are explained.</p>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chapters/introduction.html" class="btn btn-neutral float-right" title="Introduction"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Purely Functional JavaScript"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Quildreen Motta.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

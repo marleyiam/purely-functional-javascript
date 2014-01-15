@@ -1,0 +1,213 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction &mdash; Purely Functional JavaScript 0.0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'../',
+        VERSION:'0.0.1',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+    <script type="text/javascript">
+        jQuery(function () {
+            SphinxRtdTheme.StickyNav.enable();
+        });
+    </script>
+  
+
+  
+    <link rel="top" title="Purely Functional JavaScript 0.0.1 documentation" href="../index.html"/>
+        <link rel="prev" title="Preface" href="../preface.html"/> 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Purely Functional JavaScript</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#why-care-about-functional-programming">Why care about Functional Programming?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-use-javascript">Why use JavaScript?</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="../index.html">Purely Functional JavaScript</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/chapters/introduction.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>Writing correct and maintainable software is a difficult task, specially as
+software gets more and more complex, more and more concurrent, as the trend
+suggests they shall. These problems motivate the pursuit of alternative
+approaches to programming in order to keep up with the times, and functional
+programming has been re-discovered over and over again over the past years,
+with subsets of it slowly finding their way into mainstream programming
+languages.</p>
+<p>In the next chapters we will study the pure functional approach to programming,
+from which most of today&#8217;s ideas for managing complexity comes from. Functional
+programming comes from the idea that programs are just mathematical
+expressions, and can be resolved like any mathematical expression, by
+substituting and reducing expressions. This in turn means that a computation
+can&#8217;t perform observable effects, such as showing a message on the screen, or
+saving some contents to a file in the HDD.</p>
+<p>At first, pure functional programming might sound like a fairly useless
+approach, since the goal of all programs is to effect the world in some way,
+and allow computer users to observe them. In fact, pure functional programming
+makes such effects more powerful. By replacing the actual effects with a
+description of what should happen they allow the programmer to abstract over
+effects in the same way as they would abstract over any other value. An
+interpreter then takes care of applying these descriptions to the world, in a
+way that the effects can be observed.</p>
+<div class="section" id="why-care-about-functional-programming">
+<h2>Why care about Functional Programming?<a class="headerlink" href="#why-care-about-functional-programming" title="Permalink to this headline">¶</a></h2>
+<p>One might say that other approaches to programming can also solve the problem
+of writing correct and maintainable software. That is true. There are many
+approaches to programming that allow one to achieve such a goal, and functional
+programming is just another approach.</p>
+<p>There are two points where functional programming particularly excels:
+reasoning, and abstracting. A pure functional program is just a mathematical
+expression, and as such it can be understood by the use of equational
+reasoning, just like any other mathematical computation. More so, functional
+programming draws from some of the most abstract branches of mathematics, such
+as Category Theory, in order to provide tools for generalising computations as
+much as possible and increasing code re-usability, which in turn lessens the
+amount of concepts that need to be understood by the programmer.</p>
+<p>It&#8217;s important to note that functional programming&#8217;s influence of Category
+Theory and other abstract branches of mathematics is a double-edged sword. On
+one hand, it provides powerful tools for the programmer to manage complexity by
+working with higher-level concepts, and the ability of applying such concepts
+to as many contexts as possible. On the other hand, it offers little guidance
+to the uninitiated, and can be perceived as a higher barrier to entry than a
+programming approach that focuses on concrete concepts instead.</p>
+<p>Thorough this book, we will see that, while the perceived conceptual barrier of
+abstractions might be scary at first, they&#8217;re easier to understand on the long
+run, and not that difficult to learn. Besides, abstractions allow code to be
+more reusable, such that bigger programs can be easily composed in terms of
+smaller ones. This is an important characteristic for writing maintainable
+software, as they grow more complex.</p>
+</div>
+<div class="section" id="why-use-javascript">
+<h2>Why use JavaScript?<a class="headerlink" href="#why-use-javascript" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../preface.html" class="btn btn-neutral" title="Preface"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Quildreen Motta.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>
