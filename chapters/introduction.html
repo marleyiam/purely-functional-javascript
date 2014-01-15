@@ -55,6 +55,7 @@
 
   
     <link rel="top" title="Purely Functional JavaScript 0.0.1 documentation" href="../index.html"/>
+        <link rel="next" title="Programming as Mathematical Expressions" href="chapter-1.html"/>
         <link rel="prev" title="Preface" href="../preface.html"/> 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -84,10 +85,12 @@
             <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#why-care-about-functional-programming">Why care about Functional Programming?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-functional-programming-matters">Why Functional Programming Matters?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-use-javascript">Why use JavaScript?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-follow-the-examples-in-this-book">How to follow the examples in this book?</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="chapter-1.html">Programming as Mathematical Expressions</a></li>
 </ul>
 
         
@@ -124,58 +127,96 @@
             
   <div class="section" id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>Writing correct and maintainable software is a difficult task, specially as
-software gets more and more complex, more and more concurrent, as the trend
-suggests they shall. These problems motivate the pursuit of alternative
-approaches to programming in order to keep up with the times, and functional
-programming has been re-discovered over and over again over the past years,
-with subsets of it slowly finding their way into mainstream programming
-languages.</p>
-<p>In the next chapters we will study the pure functional approach to programming,
-from which most of today&#8217;s ideas for managing complexity comes from. Functional
-programming comes from the idea that programs are just mathematical
-expressions, and can be resolved like any mathematical expression, by
-substituting and reducing expressions. This in turn means that a computation
-can&#8217;t perform observable effects, such as showing a message on the screen, or
-saving some contents to a file in the HDD.</p>
+<p>Writing correct and maintainable software is a difficult task, specially
+as software gets more and more complex, more and more concurrent, as the
+trend suggests they shall. These problems motivate the pursuit of
+alternative approaches to programming in order to keep up with the
+times, and functional programming has been re-discovered over and over
+again over the past years, with subsets of it slowly finding their way
+into mainstream programming languages.</p>
+<p>In the next chapters we will study the pure functional approach to
+programming, from which most of today&#8217;s ideas for managing complexity
+comes from. Functional programming comes from the idea that programs are
+just mathematical expressions, and can be resolved like any mathematical
+expression, by substituting and reducing expressions. This in turn means
+that a computation can&#8217;t perform observable effects, such as showing a
+message on the screen, or saving some contents to a file in the HDD.</p>
 <p>At first, pure functional programming might sound like a fairly useless
-approach, since the goal of all programs is to effect the world in some way,
-and allow computer users to observe them. In fact, pure functional programming
-makes such effects more powerful. By replacing the actual effects with a
-description of what should happen they allow the programmer to abstract over
-effects in the same way as they would abstract over any other value. An
-interpreter then takes care of applying these descriptions to the world, in a
-way that the effects can be observed.</p>
-<div class="section" id="why-care-about-functional-programming">
-<h2>Why care about Functional Programming?<a class="headerlink" href="#why-care-about-functional-programming" title="Permalink to this headline">¶</a></h2>
-<p>One might say that other approaches to programming can also solve the problem
-of writing correct and maintainable software. That is true. There are many
-approaches to programming that allow one to achieve such a goal, and functional
-programming is just another approach.</p>
+approach, since the goal of all programs is to effect the world in some
+way, and allow computer users to observe them. In fact, pure functional
+programming makes such effects more powerful. By replacing the actual
+effects with a description of what should happen they allow the
+programmer to abstract over effects in the same way as they would
+abstract over any other value. An interpreter then takes care of
+applying these descriptions to the world, in a way that the effects can
+be observed.</p>
+<div class="section" id="why-functional-programming-matters">
+<h2>Why Functional Programming Matters?<a class="headerlink" href="#why-functional-programming-matters" title="Permalink to this headline">¶</a></h2>
+<p>One might say that other approaches to programming can also solve the
+problem of writing correct and maintainable software. That is
+true. There are many approaches to programming that allow one to achieve
+such a goal, and functional programming is just another approach.</p>
 <p>There are two points where functional programming particularly excels:
-reasoning, and abstracting. A pure functional program is just a mathematical
-expression, and as such it can be understood by the use of equational
-reasoning, just like any other mathematical computation. More so, functional
-programming draws from some of the most abstract branches of mathematics, such
-as Category Theory, in order to provide tools for generalising computations as
-much as possible and increasing code re-usability, which in turn lessens the
-amount of concepts that need to be understood by the programmer.</p>
-<p>It&#8217;s important to note that functional programming&#8217;s influence of Category
-Theory and other abstract branches of mathematics is a double-edged sword. On
-one hand, it provides powerful tools for the programmer to manage complexity by
-working with higher-level concepts, and the ability of applying such concepts
-to as many contexts as possible. On the other hand, it offers little guidance
-to the uninitiated, and can be perceived as a higher barrier to entry than a
+reasoning, and abstracting. A pure functional program is just a
+mathematical expression, and as such it can be understood by the use of
+equational reasoning, just like any other mathematical computation. More
+so, functional programming draws from some of the most abstract branches
+of mathematics, such as Category Theory, in order to provide tools for
+generalising computations as much as possible and increasing code
+re-usability, which in turn lessens the amount of concepts that need to
+be understood by the programmer.</p>
+<p>It&#8217;s important to note that functional programming&#8217;s influence of
+Category Theory and other abstract branches of mathematics is a
+double-edged sword. On one hand, it provides powerful tools for the
+programmer to manage complexity by working with higher-level concepts,
+and the ability of applying such concepts to as many contexts as
+possible. On the other hand, it offers little guidance to the
+uninitiated, and can be perceived as a higher barrier to entry than a
 programming approach that focuses on concrete concepts instead.</p>
-<p>Thorough this book, we will see that, while the perceived conceptual barrier of
-abstractions might be scary at first, they&#8217;re easier to understand on the long
-run, and not that difficult to learn. Besides, abstractions allow code to be
-more reusable, such that bigger programs can be easily composed in terms of
-smaller ones. This is an important characteristic for writing maintainable
-software, as they grow more complex.</p>
+<p>Thorough this book, we will see that, while the perceived conceptual
+barrier of abstractions might be scary at first, they&#8217;re easier to
+understand on the long run, and not that difficult to learn. Besides,
+abstractions allow code to be more reusable, such that bigger programs
+can be easily composed in terms of smaller ones. This is an important
+characteristic for writing maintainable software, as they grow more
+complex.</p>
 </div>
 <div class="section" id="why-use-javascript">
 <h2>Why use JavaScript?<a class="headerlink" href="#why-use-javascript" title="Permalink to this headline">¶</a></h2>
+<p>JavaScript isn&#8217;t the simplest or most straight-forward language for the
+purely functional approach, but it has one point in favour: it is
+ubiquitous. It&#8217;s much easier for one to explore the concepts presented
+in this book in JavaScript, since it&#8217;s fairly likely that they already
+got everything they need.</p>
+<p>Besides, pure functional programming is often seen as not-practical, and
+fantasy-land of sorts, whereas JavaScript is increasingly seen as a
+practical language. One of the goals of this book is to show that pure
+functional programming can be not only practical, but also enjoyable,
+and powerful. Applying the concepts to JavaScript seems to be a good way
+of achieving this.</p>
+<blockquote>
+<div>“But JavaScript isn&#8217;t a functional programming language!”</div></blockquote>
+<p>You will often see people saying that language X is or is not
+functional. Most of these people actually mean that language X offers or
+not facilities to apply the concepts of functional programming in a
+straight-forward fashion. Haskell is seen as one of the best languages
+for applying this style of programming, but for the concepts presented
+in this book, any programming language that allows first-class and
+higher-order functions (such as Scheme, Python, Lua, Smalltalk, etc.)
+will suffice.</p>
+</div>
+<div class="section" id="how-to-follow-the-examples-in-this-book">
+<h2>How to follow the examples in this book?<a class="headerlink" href="#how-to-follow-the-examples-in-this-book" title="Permalink to this headline">¶</a></h2>
+<p>The examples in this book are presented using the JavaScript programming
+language. If you&#8217;re following the book in your web-browser, you likely
+have everything that you need to for experimenting with the
+concepts. Just open the JavaScript console on your browser&#8217;s development
+tools and you&#8217;re good to go.</p>
+<p>Alternatively you can download <a class="reference external" href="nodejs.org">Node.js</a> and follow along in your
+terminal&#8217;s REPL. Or you can follow along in any language supporting
+first-class and higher-order functions, if you prefer. But do note that
+this will require you to have a comfortable knowledge of both the target
+programming language, and JavaScript.</p>
 </div>
 </div>
 
@@ -184,6 +225,8 @@ software, as they grow more complex.</p>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chapter-1.html" class="btn btn-neutral float-right" title="Programming as Mathematical Expressions"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../preface.html" class="btn btn-neutral" title="Preface"><span class="icon icon-circle-arrow-left"></span> Previous</a>

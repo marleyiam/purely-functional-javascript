@@ -1,0 +1,205 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Programming as Mathematical Expressions &mdash; Purely Functional JavaScript 0.0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'../',
+        VERSION:'0.0.1',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+    <script type="text/javascript">
+        jQuery(function () {
+            SphinxRtdTheme.StickyNav.enable();
+        });
+    </script>
+  
+
+  
+    <link rel="top" title="Purely Functional JavaScript 0.0.1 documentation" href="../index.html"/>
+        <link rel="prev" title="Introduction" href="introduction.html"/> 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Purely Functional JavaScript</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#why-functional-programming-matters">Why Functional Programming Matters?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#why-use-javascript">Why use JavaScript?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#how-to-follow-the-examples-in-this-book">How to follow the examples in this book?</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Programming as Mathematical Expressions</a></li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="../index.html">Purely Functional JavaScript</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Programming as Mathematical Expressions</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/chapters/chapter-1.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="programming-as-mathematical-expressions">
+<h1>Programming as Mathematical Expressions<a class="headerlink" href="#programming-as-mathematical-expressions" title="Permalink to this headline">¶</a></h1>
+<p>Programming is the act of communicating ideas with the computer in order
+to have it do something for you. Incidentally, most of today&#8217;s
+programming happens using things called “Programming Languages,” which
+are not much different from our so familiar natural languages, such as
+English or French. They are composed of syntax (how you may form valid
+constructs in the language), and semantics (what those valid constructs
+mean). A programmer will usually wield both of these in order to express
+a particular program.</p>
+<p>But how can we understand programs? How do we know that what we&#8217;ve
+communicated to the computer is, in fact, what we wanted to communicate?
+When we&#8217;re communicating with other people, we can look for hints in
+their expressions and get immediate feedback on whether what we&#8217;re
+communicating is getting through or not, and if not, we can work
+together on how to get our point across better, adapting our messages,
+or the media we&#8217;re using to communicate. We are not so lucky with
+computers, unfortunately. The state of the tools for programming does
+not allow such expressive way of finding what&#8217;s wrong.</p>
+<p>There are different approaches to assessing such errors, and
+understanding the behaviour of our programs as the computer would. One
+of them, which is fairly pervasive in the field, involves role-playing a
+computer. You go through each line of your program and tell yourself to
+do this, and do that. This approach involves a high cognitive load,
+since one must keep in their head a broad range of knowledge about the
+entire world, and how things affect one another. While there are certain
+tools that might help one role-play computers, such as <em>stepping
+debuggers</em>, they only lessen a the problem a little bit.</p>
+<p>An alternative approach is to treat each program as a single
+mathematical expression, such that one may understand the behaviour of
+their programs by equational reasoning. This means that a programmer can
+reason about their programs by understanding how the smaller and simpler
+pieces work, and generalising to form the big picture. In other words,
+if I can understand how addition works for 1 and 2, I can use that
+knowledge for understanding how addition works for any two numbers N
+and M. The big advantage of equational reasoning is that it frees the
+programmer from role-playing computers, in a way that programmers and
+computers can complement, and aid each other in constructing programs.</p>
+<p>The idea of functional programming stems from the λ-calculus
+mathematical formalism, developed by Alonzo Church. The idea of this
+calculus is that computations are expressed entirely as function
+abstractions and applications. It is, in essence, <em>programming with
+(mathematical) functions</em>. Programs expressed in λ-calculus can be
+resolved by substitution and reduction rules, similar to what one is
+used to in simple mathematical expressions.</p>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Quildreen Motta.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>
