@@ -19,4 +19,4 @@ co-recursion, algebraic types, and the so feared M-word.
    :maxdepth: 2
 
    preface
-   
+   chapters/introduction
