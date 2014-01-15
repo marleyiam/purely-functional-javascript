@@ -183,7 +183,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'PurelyFunctionalJavaScript.tex', u'Purely Functional JavaScript Documentation',
+  ('index', 'PurelyFunctionalJavaScript.tex', u'Purely Functional JavaScript',
    u'Quildreen Motta', 'manual'),
 ]
 
@@ -213,7 +213,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'purelyfunctionaljavascript', u'Purely Functional JavaScript Documentation',
+    ('index', 'purelyfunctionaljavascript', u'Purely Functional JavaScript',
      [u'Quildreen Motta'], 1)
 ]
 
@@ -227,8 +227,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'PurelyFunctionalJavaScript', u'Purely Functional JavaScript Documentation',
-   u'Quildreen Motta', 'PurelyFunctionalJavaScript', 'One line description of project.',
+  ('index', 'PurelyFunctionalJavaScript', u'Purely Functional JavaScript',
+   u'Quildreen Motta', 'PurelyFunctionalJavaScript', 'An ebook about the purely functional approach to programming in JavaScript.',
    'Miscellaneous'),
 ]
 
