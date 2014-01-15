@@ -29,8 +29,8 @@ way that the effects can be observed.
 
 
 
-Why care about Functional Programming?
-======================================
+Why Functional Programming Matters?
+===================================
 
 One might say that other approaches to programming can also solve the problem
 of writing correct and maintainable software. That is true. There are many
@@ -61,9 +61,54 @@ more reusable, such that bigger programs can be easily composed in terms of
 smaller ones. This is an important characteristic for writing maintainable
 software, as they grow more complex.
 
+..
+  :REVIEW:
+  Probably would be interesting to create a better parallel between imperative
+  programs and functional ones, with examples. Hughes' WFPM could also provide
+  some good quotes.
+
 
 Why use JavaScript?
 ===================
 
+JavaScript isn't the simplest or most straight-forward language for the purely
+functional approach, but it has one point in favour: it is ubiquitous. It's
+much easier for one to explore the concepts presented in this book in
+JavaScript, since it's fairly likely that they already got everything they
+need.
+
+Besides, pure functional programming is often seen as not-practical, and
+fantasy-land of sorts, whereas JavaScript is increasingly seen as a practical
+language. One of the goals of this book is to show that pure functional
+programming can be not only practical, but also enjoyable, and
+powerful. Applying the concepts to JavaScript seems to be a good way of
+achieving this.
+
+    “But JavaScript isn't a functional programming language!”
+
+You will often see people saying that language X is or is not functional. Most
+of these people actually mean that language X offers or not facilities to apply
+the concepts of functional programming in a straight-forward fashion. Haskell
+is seen as one of the best languages for applying this style of programming,
+but for the concepts presented in this book, any programming language that
+allows first-class and higher-order functions (such as Scheme, Python, Lua,
+Smalltalk, etc.)  will suffice.
 
 
+How to follow the examples in this book?
+========================================
+
+The examples in this book are presented using the JavaScript programming
+language. If you're following the book in your web-browser, you likely have
+everything that you need to for experimenting with the concepts. Just open the
+JavaScript console on your browser's development tools and you're good to go.
+
+Alternatively you can download `Node.js`_ and follow along in your terminal's
+REPL. Or you can follow along in any language supporting first-class and
+higher-order functions, if you prefer. But do note that this will require you
+to have a comfortable knowledge of both the target programming language, and
+JavaScript.
+
+..
+  :REVIEW:
+  This should be entirely rewritten :(
