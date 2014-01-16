@@ -283,3 +283,5 @@ epub_copyright = u'2014, Quildreen Motta'
 
 # Allow duplicate toc entries.
 #epub_tocdup = True
+
+highlight_language = 'js'

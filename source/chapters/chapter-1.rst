@@ -50,3 +50,117 @@ abstractions and applications. It is, in essence, *programming with
 resolved by substitution and reduction rules, similar to what one is
 used to in simple mathematical expressions.
 
+
+An overview of λ-calculus
+=========================
+
+But what is λ-calculus anyway? To understand, we can start from the
+following mathematical expression:
+
+.. math::
+
+   x = 4 / 2
+
+
+This expression tells us that :math:`\, x \,` is equivalent to the
+expression :math:`\, 4 / 2 \,`, so anywhere we see :math:`\, x
+\,` we can replace it by the thing on the right of the equals, and
+vice-versa. We can further generalise this expression over all numbers:
+
+.. math::
+
+   half(x) = x / 2
+   
+
+Now we're getting close to λ-calculus. In λ-calculus, all expressions
+are represented by functions, where functions are things that map inputs
+over a particular domain (e.g.: all numbers), to an image. For the
+aforementioned expression, it would be a function that maps all numbers
+to their halves. There's only one catch with λ-calculus: in order to
+achieve the abstractive power we want, we shall simplify the function
+even further, by treating it anonymously. So, instead of giving the
+function an explicit name, we'll just replace that name with the
+:math:`\, \lambda \,` symbol:
+
+.. math::
+
+   \lambda x. x / 2
+
+
+The previous form is called a **lambda abstraction**, as it represents a
+mathematical expression in an abstract form, since some of the terms
+that make up the expression are not concrete values. To move from an
+abstract expression to a concrete one, we need to provide the values for
+the lambda abstraction. This process is called **(function)
+application**, and has a form similar to that of multiplication. That
+is, it's a juxtaposition of terms :math:`\, t x \,`, where :math:`\, t
+\,` and :math:`\, x \,` are both expressions. :math:`\, x \,` is called
+the *argument* of the function application.
+
+.. math::
+
+   \begin{align}
+       & (\lambda x. x / 2) 4  \\
+     = & (\lambda 4. 4 / 2)
+   \end{align}
+
+
+Function application is straight-forward to reason about, since it just
+means “substitute :math:`\, x \,` by this concrete value,” where the
+concrete value in this case is 4. We can compute the value of any lambda
+abstraction by substituting and reducing the expression to simpler
+terms. This form of computation is called *the substitution model*, and
+provides a powerful framework for understanding the computations:
+
+.. math::
+
+   \begin{align}
+       & (\lambda x. x / 2) 4  \\
+     = & (\lambda 4. 4 / 2)    \\
+     = & (4 / 2)               \\
+     = & 2
+   \end{align}
+
+
+
+The λ-calculus in JavaScript
+============================
+
+By understanding the previous section, you're one step from becoming a
+programmer. The only thing left is to make the computer understand those
+expressions. Sadly, there isn't a computer program that will interpret
+such arcane mathametical symbols for you, so we'll have to use a
+different set of symbols that our computer can understand instead. For
+this, we'll use the JavaScript programming language.
+
+In JavaScript, the ``function`` construct represents a lambda
+abstraction. Note that, since JavaScript is not expression-oriented like
+λ-calculus, we need to explicitly state that our lambda abstraction is
+the same as the expression ``x / 2`` using the ``return`` construct::
+
+
+    (function (x) { return x / 2 })
+
+
+Likewise, λ-calculus' function application concept is represented by the
+function application construct in JavaScript, where instead of simply
+juxtaposing the argument, we need to put it inside parenthesis::
+
+
+    (function (x) { return x / 2 })(4)
+
+
+You can run this snippet in your JavaScript console, and it'll answer
+you 2. Try changing the value of the argument and see what happens.
+
+At this point, you can proudly call yourself a
+programmer. Unfortunately, the amount of programs you can express using
+the concepts explained is small. But don't worry. λ-calculus can express
+complex computations as well, and these forms of computation are what
+the next section is all about!
+
+
+Abstracting the abstractions
+============================
+
+
